@@ -4,17 +4,17 @@
 int main(void)
 {
     //Ask for the original figure
-    int of = get_int("What is the original figure: ");
+    double of = get_double("What is the original figure: ");
 
     //Get discount or percentage amount
-    int dis = get_int("To what percentage / discount: ");
+    double dis = get_double("To what percentage / discount: ");
 
     //Convert inputs to floats
-    float pf = (float)of / (float)dis;
+    float pf = ((float)dis / (float)100.00) * (float)of;
 
     string a = "Discount of";
-    string b = "%""from";
+    string b = "percent from";
     string c = "is:";
     //Print results
-     printf("%s %i %s %i %s %f\n", a, dis,b, of, c, pf);
+     printf("%s %f %s %f %s %f\n", a, dis, b, of, c, pf);
 }
